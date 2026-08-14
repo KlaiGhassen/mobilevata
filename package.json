@@ -1,0 +1,16 @@
+{
+  "name": "autovia",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Autovia — multilingual vehicle marketplace (Next.js + NestJS + MongoDB)",
+  "scripts": {
+    "dev:api": "npm run start:dev --prefix api",
+    "dev:web": "npm run dev --prefix web",
+    "dev:admin": "npm run dev --prefix admin",
+    "seed": "npm run seed --prefix api",
+    "brands:logos": "node scripts/download-brand-logos.mjs",
+    "build": "npm run build --prefix api && npm run build --prefix web && npm run build --prefix admin"
+  },
+  "keywords": ["nextjs", "nestjs", "mongodb", "marketplace", "i18n", "admin"],
+  "license": "MIT"
+}
