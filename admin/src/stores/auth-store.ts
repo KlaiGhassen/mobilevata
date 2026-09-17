@@ -52,7 +52,7 @@ export const useAuthStore = create<AuthState>((set) => ({
     } catch {
       set({ user: null, loading: false });
       throw new Error(
-        'Signed in but the session cookie was blocked. Use http://localhost:3001 and the /backend proxy.',
+        'Signed in but the session cookie was not kept. Recheck and allow cookies, or serve this panel over HTTPS.',
       );
     }
   },
