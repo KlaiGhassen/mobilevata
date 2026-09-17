@@ -24,6 +24,7 @@ export default function RootNotFound() {
           <p style={{ color: '#64748b', marginBottom: 20 }}>
             This road doesn&apos;t lead anywhere.
           </p>
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- root shell, no router context */}
           <a
             href="/"
             style={{
