@@ -44,7 +44,7 @@ services:
       retries: 20
 
   minio:
-    image: minio/minio:RELEASE.2024-10-02T17-50-41Z
+    image: quay.io/minio/minio:latest
     restart: unless-stopped
     command: server /data --console-address ":9001"
     ports:
@@ -62,7 +62,7 @@ services:
       retries: 10
 
   minio-init:
-    image: minio/mc:RELEASE.2024-10-08T09-37-26Z
+    image: quay.io/minio/mc:latest
     depends_on:
       minio:
         condition: service_healthy
